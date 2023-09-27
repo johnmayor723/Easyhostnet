@@ -17,13 +17,13 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  const { emailContent } = req.body;
+  const { email } = req.body;
 
   const mailOptions = {
     from: 'your-email@gmail.com',
     to: 'info@easyhostnet.com', // Replace with the recipient's email address
     subject: 'Captured Email',
-    text: emailContent
+    text: `user email is ${email}`
     
   };
 
