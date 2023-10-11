@@ -25,7 +25,7 @@ app.post('/send-email', (req, res) => {
     from: 'your-email@gmail.com',
     to: 'info@easyhostnet.com', // Replace with the recipient's email address
     subject: 'Captured Email',
-    text: `user email is ${data}`
+    text: `user email is ${data.email}`
     
   };
 
